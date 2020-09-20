@@ -6,7 +6,7 @@ Dhvani Katkoria
 
 ## Introduction
 
-![road_seg](/image/road_seg.png)
+![road_seg](/image_dataset/road_seg.png)
 Road detection is beneficial for various autonomous vehicles tasks. Robust road segmentation is a key challenge in self-driving research. Despite rapid developments in visual image-based road detection, robustly identifying road areas in visual images remains challenging due to issues like illumination changes and blurry images. To improve better road detection and segmentation the same image is used in different way for features extraction and this features are combined with the features extracted from original image. Image is initially segmented using K-means clustering into 3 parts end, LiDAR sensor data can be incorporated to improve the visual image-based road detection, because LiDAR data is less susceptible to visual noises. The project is to perform segmentation of road regions from given input image using fusion of features. Two set of images are used for training a CNN model: Original image and basic segmented image using K-means clustering. Features of both images are fused to obtain better accuracy in segmentation task. 
 
 
@@ -17,7 +17,7 @@ uu - urban unmarked (98/100)
 um - urban marked (95/96)
 umm - urban multiple marked lanes (96/94)
 Image belows shows sample image and its ground truth.
-![data](/image/dataset.png)
+![data](/image_dataset/dataset.png)
 
 However, the ground truths are available only for training images. Hence, only training images are used for project and the same is divided into training and test data for model training and evaluation. <br />
 
@@ -26,7 +26,7 @@ However, the ground truths are available only for training images. Hence, only t
 
 - Image encoding is used to convert image data into 3D array with (R,G,B) values at each pixel position.
 - K-means clustering is applied to image for initial segmentation of image into 3 parts assuming image is segmented for each part represented by road, sky, other objects. So, for each part features can be extracted and used along with original image features for model training.
-- Feature learning is important to derive new features in dataset. We learn features from original image as well as from initial segmented image using CNN model and merge the features obtained from both the images for better feature learning and precise segmentation.
+- Feature learning is important to imagederive new features in dataset. We learn features from original image as well as from initial segmented image using CNN model and merge the features obtained from both the images for better feature learning and precise segmentation.
 - The project is implemented using publicly available dataset to avoid any kind of harm to anyone's privacy. 
 - Model evaluation metrics like accuracy, precision, recall, Mean IOU and AUC scores are used for evaluation of trained model.
 - Visualizing results is important for anyone to observe the precision of results obtained. Training and validation accuracy scores are plotted for each epoch to observe the learning graph. Output segmented image is visualized with original image for clear view of segmented area.
@@ -38,7 +38,7 @@ However, the ground truths are available only for training images. Hence, only t
 - Fused feature output are fed to next block for original input image feature extraction. Intention is to obtain precise segmentation for original input image, hence fused features are not passed to blocks to basic segmented image. 
 - The three typical fusion structures can be used as shown in the below image. Figure(a) depicts early fusion mode, in which features are fused at the input layer. Figure(b) is late fusion in which two side-by-side encoder will merge at the end of encoding stage(before decoding). Figure(c) is stage-wise fusion, meaning that fusion happens at every stage inside the encoder. Here, stage-wise fusion is performed after extracting features at each stage.
 
-![fusion](/image/fusion.png)
+![fusion](/image_dataset/fusion.png)
 
 - Different fusion techniques can be applied for merging intermediate output layers. Here, following fusion methods are used for merging intermediate outputs: 
 **weighted_sum :** uses weighted sum of features with 0.3 weight to clustered image feature and 1 to original image
@@ -48,11 +48,11 @@ However, the ground truths are available only for training images. Hence, only t
 **no_fusion :** train model only using original input without any fusion
 - Architechture of model used is as shown below.
 
-![architechture](/image/architechture.png)
+![architechture](/image_dataset/architechture.png)
 
 -Model summary for **maximum** fusion type is as shown below.
 
-![model](/image/model.png)
+![model](/image_dataset/model.png)
 
 - Evaluation of model is done using Accuracy, Precision, Recall, AUC and Mean IOU metrics.
 - Training and validation accuracy plots for each fusion type to visualize the accuracy plot are as shown below:
