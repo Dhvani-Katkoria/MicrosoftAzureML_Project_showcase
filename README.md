@@ -11,7 +11,7 @@ Road detection is beneficial for various autonomous vehicles tasks. Robust road 
 
 
 ## Dataset: 
-**Kitti Road/Lane Detection Evaluation 2013:** datas</p>et is used for road segmentation. The dataset consists of 289 training and 290 test images. It contains three different categories of road scenes:
+**Kitti Road/Lane Detection Evaluation 2013:** Dataset is used for road segmentation. The dataset consists of 289 training and 290 test images. Link : http://www.cvlibs.net/datasets/kitti/eval_road.php It contains three different categories of road scenes:
 
 - uu : urban unmarked (98/100)
 - um : urban marked (95/96)
