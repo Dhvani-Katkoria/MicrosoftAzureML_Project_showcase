@@ -57,8 +57,10 @@ Image above shows sample image and its ground truth. However, the ground truths 
 
 - Evaluation of model is done using Accuracy, Precision, Recall, AUC and Mean IOU metrics.
 - Training and validation accuracy plots for each fusion type to visualize the accuracy plot are as shown below:
-
+   ![acc](/image_dataset/acc.png) ![img_only_acc](/image_dataset/img_only_acc.png)<br />
+   ![loss](/image_dataset/loss.png) 
 - Output images are visualized against the original image using transparency. Output image are pixels are assigned green and red RGB values based on the probabilities of 2 classes (Road & Non Road) predicted by model. Output image and input image are fused using average of each pixels of each image for transparency. Few results are as shown below. 
+   ![output](/image_dataset/output.png)
 -Notebook contains the code implemented in google colab.
 
 ## Impact and Future scope
