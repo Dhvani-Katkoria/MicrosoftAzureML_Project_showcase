@@ -49,9 +49,9 @@ Image above shows sample image and its ground truth. However, the ground truths 
 **no_fusion :** train model only using original input without any fusion
 - Architechture of model used is as shown below.
 <img src = 'image_dataset/architechture.png' />
-​
+
 -Model summary for **maximum** fusion type is as shown below.
-​
+
    <img src = 'image_dataset/model.png' /> 
 ​
 - Evaluation of model is done using Accuracy, Precision, Recall, AUC and Mean IOU metrics.
