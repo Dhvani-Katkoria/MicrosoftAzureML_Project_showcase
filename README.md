@@ -6,7 +6,7 @@ Dhvani Katkoria
 ## Introduction
 
   
-   <img src = 'image_dataset/road_seg.png' /> <br />
+   <img src = 'image_dataset/road_seg.png' /> 
 Road detection is beneficial for various autonomous vehicles tasks. Robust road segmentation is a key challenge in self-driving research. Despite rapid developments in visual image-based road detection, robustly identifying road areas in visual images remains challenging due to issues like illumination changes and blurry images. To improve better road detection and segmentation the same image is used in different way for features extraction and this features are combined with the features extracted from original image. Image is initially segmented using K-means clustering into 3 parts end, LiDAR sensor data can be incorporated to improve the visual image-based road detection, because LiDAR data is less susceptible to visual noises. The project is to perform segmentation of road regions from given input image using fusion of features. Two set of images are used for training a CNN model: Original image and basic segmented image using K-means clustering. Features of both images are fused to obtain better accuracy in segmentation task. 
 
 
@@ -20,7 +20,7 @@ Road detection is beneficial for various autonomous vehicles tasks. Robust road 
 
  <img src = 'image_dataset/dataset.png' /> 
  
-Image above shows sample image and its ground truth. However, the ground truths are available only for training images. Hence, only training images are used for project and the same is divided into training and test data for model training and evaluation. <br />
+Image above shows sample image and its ground truth. However, the ground truths are available only for training images. Hence, only training images are used for project and the same is divided into training and test data for model training and evaluation. 
 
 
 ## Knowledge from coursework:
